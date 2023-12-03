@@ -101,3 +101,12 @@ a {
 .skills {
   width: 60vw;
 }
+.flex-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+.flex-children {
+  width: 60vw;
+}
