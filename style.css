@@ -178,3 +178,14 @@ a {
 .flex-children {
   width: 60vw;
 }
+.footer {
+  text-align: center;
+  height: 100px;
+  background-color: #0e0e0e;
+  color: #a7a3a3;
+}
+.footertext {
+  font-family: "Source Sans Pro", arial, sans-serif;
+  padding-top: 1rem;
+  font-size: 15px;
+}
