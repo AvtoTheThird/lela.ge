@@ -9,11 +9,78 @@
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.cdnfonts.com/css/mark-my-words"
+      rel="stylesheet"
+    />
 
     <link
       href="https://fonts.googleapis.com/css?family=Pacifico"
       rel="stylesheet"
     />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dialogBox = document.getElementById("dialogBox");
+        const openDialogBtn = document.getElementById("openDialogBtn");
+        const closeDialogBtn = document.getElementById("closeDialogBtn");
+        const imageContainer = document.getElementById("imageContainer");
+        const overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+        openDialogBtn.addEventListener("click", () => {
+          document.body.appendChild(overlay);
+          overlay.style.display = "block";
+          dialogBox.show();
+
+          // Function to generate random rotation in degrees
+          function getRandomRotation() {
+            return Math.floor(Math.random() * 360);
+          }
+
+          // Function to create and position images with random rotations
+          function createImages() {
+            for (let i = 0; i < 35; i++) {
+              // Change this number to the desired count of images
+              const img = document.createElement("img");
+              img.src = "./fotos/heart.png"; // Replace with your image path
+              img.classList.add("dialogImage");
+
+              // Random position within the dialog box
+              const posX = Math.random() * dialogBox.offsetWidth;
+              const posY = Math.random() * dialogBox.offsetHeight;
+              img.style.left = posX + "px";
+              img.style.top = posY + "px";
+
+              // Random rotation
+              img.style.transform = `rotate(${getRandomRotation()}deg)`;
+
+              imageContainer.appendChild(img);
+            }
+          }
+
+          // Create images when dialog opens
+          createImages();
+
+          // Function to continuously change the rotation of images
+          function changeRotation() {
+            const images = document.querySelectorAll(".dialogImage");
+            images.forEach((img) => {
+              img.style.transform = `rotate(${getRandomRotation()}deg)`;
+            });
+          }
+
+          // Change rotation every 0.5 seconds
+          const rotationInterval = setInterval(changeRotation, 500);
+
+          closeDialogBtn.addEventListener("click", () => {
+            dialogBox.close();
+            dialogBox.close();
+            overlay.style.display = "none";
+            clearInterval(rotationInterval);
+            imageContainer.innerHTML = ""; // Clear images when dialog closes
+          });
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -28,6 +95,23 @@
         <a href="./fotos/5555.webp" download>Download CV</a>
       </h3>
     </div>
+    <button id="openDialogBtn">.</button>
+
+    <dialog id="dialogBox">
+      <h1 class="mmy">
+        <img width="75px" src="./fotos/heart.png" alt="" />I
+        <span style="color: red">LOVE</span> YOU<img
+          width="75px"
+          src="./fotos/heart.png"
+          alt=""
+        />
+      </h1>
+      <h3 class="mmyy">Hope this made you happy</h3>
+      <img class="forg" src="./fotos/forg.jpg" alt="" />
+      <div id="imageContainer"></div>
+      <button class="button-74" id="closeDialogBtn">KIJEJ</button>
+      <p class="secret">From: bebeto</p>
+    </dialog>
     <div class="grid-container">
       <div class="grid-item">
         <a href="./components/namaste.html">
