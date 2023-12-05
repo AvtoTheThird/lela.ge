@@ -171,7 +171,7 @@ body {
   color: rgb(202, 20, 126);
 }
 .AAAAAA {
-  margin-left: 70px;
+  margin-left: 2vw;
 }
 .contact-link {
   justify-content: space-between;
@@ -182,16 +182,17 @@ body {
   color: black;
   border-radius: 15px;
   height: 8vh;
-  width: 15vw;
+  width: 13vw;
   margin-top: 1rem;
 }
 .ebee {
+  width: 35vw;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 .down {
-  width: 20vw;
+  /* width: 20vw; */
   font-weight: 100;
   text-decoration: underline;
 }
@@ -243,16 +244,20 @@ a {
   color: #cfcfcf;
 }
 .info {
-  padding-top: 10vh;
+  display: flex;
+  /* justify-content: space-evenly; */
+  padding-left: 5vw;
+  gap: 3vw;
+  padding-top: 8vh;
   background-color: white;
   display: flex;
   color: black;
 }
 .lela {
-  width: 30vw;
-  height: 30vw;
+  width: 25vw;
+  height: 25vw;
   /* border-radius: 100%; */
-  padding: 0px 4vw;
+  padding-right: 2vw;
 }
 
 .text {
