@@ -390,10 +390,47 @@ dialog {
     padding: 0 25px;
   }
 }
-
+.header-mobile {
+  display: none; /* Hidden by default */
+}
 .secret {
   position: absolute;
   padding-bottom: 15px;
   right: 10px; /* Adjust the right offset */
   font-family: "Mark My Words", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    display: none;
+  }
+  .header-mobile {
+    text-align: center;
+    display: block;
+  }
+  .rat {
+    font-family: "Montserrat";
+    font-size: 15px;
+  }
+  body {
+    margin: 0 auto;
+    width: 90vw;
+    color: #ffffff;
+    background-color: #0e0e0e;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    padding: 0px 16px;
+  }
+  .grid-item {
+    position: relative;
+    width: 40vw;
+    height: 40vw;
+    margin-bottom: 15px;
+  }
+  .work-contact {
+    margin: auto;
+    padding-bottom: 20px;
+  }
 }
