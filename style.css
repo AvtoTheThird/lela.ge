@@ -30,29 +30,36 @@ body {
 }
 .header {
   /* position: relative; */
-  height: 140px;
+  padding-top: 10px;
+  height: 120px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  /* padding-left: 100px; */
+  /* padding-right: 72px; */
+}
+.contactCV {
+  display: flex;
+  justify-content: space-around;
+  gap: 2vw;
 }
 .work-contact {
-  /* padding-left: 150px; */
-  width: 320px;
+  /* padding-right: 150px; */
+  width: 250px;
   display: flex;
   gap: 1rem;
   /* padding-right: 25rem; */
 }
 .name {
   /* position: absolute; */
-  width: 320px;
+  width: 300px;
   padding-bottom: 22px;
   font-family: "Pacifico";
   font-size: 40px;
 }
 .lel {
   /* text-shadow: 0px 0px 60px rgb(255, 0, 98); */
-
-  /* margin-right: 150px; */
+  margin-right: 20px;
   animation: flickerr 1s forwards; /* Adjust animation duration as needed */
 }
 
@@ -174,7 +181,7 @@ body {
   margin-left: 2vw;
 }
 .contact-link {
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 10px;
   align-items: center;
   display: flex;
@@ -182,7 +189,7 @@ body {
   color: black;
   border-radius: 15px;
   height: 8vh;
-  width: 13vw;
+  width: 15vw;
   margin-top: 1rem;
 }
 .ebee {
@@ -199,7 +206,8 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns */
-  padding: 1vw 100px;
+  padding-left: 5.8vw;
+  /* padding: 1vw 100px; */
 }
 
 .grid-item {
@@ -254,10 +262,14 @@ a {
   color: black;
 }
 .lela {
-  width: 25vw;
-  height: 25vw;
+  width: 30vw;
+  height: 30vw;
   /* border-radius: 100%; */
-  padding-right: 2vw;
+  padding-right: 5.2vw;
+}
+.aboutmeFoto {
+  width: 30vw;
+  height: 30vw;
 }
 
 .text {
